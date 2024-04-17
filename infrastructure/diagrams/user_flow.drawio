@@ -1,0 +1,118 @@
+<mxfile host="65bd71144e">
+    <diagram id="9b5LC0iCoVJjZ2Es-ymr" name="Page-1">
+        <mxGraphModel dx="1758" dy="1457" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1920" pageHeight="1200" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;startArrow=classic;startFill=1;endArrow=classic;endFill=1;strokeWidth=1;" edge="1" parent="1" source="7" target="22">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="" style="group;fontSize=16;" vertex="1" connectable="0" parent="1">
+                    <mxGeometry x="200" y="290" width="730" height="800" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;strokeColor=default;fillColor=none;container=0;" vertex="1" parent="3">
+                    <mxGeometry width="730" height="800" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="" style="shape=actor;whiteSpace=wrap;html=1;fontSize=16;" vertex="1" parent="3">
+                    <mxGeometry x="335.4054054054054" y="149.99632183908045" width="78.91891891891892" height="110.3448275862069" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;1. User enters contents through Notion&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" vertex="1" parent="3">
+                    <mxGeometry x="39.99972972972973" y="280.00275862068963" width="335.4054054054054" height="55.17241379310345" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;Notion&lt;/font&gt;" style="shape=datastore;whiteSpace=wrap;html=1;fontSize=16;" vertex="1" parent="3">
+                    <mxGeometry x="315.68567567567567" y="602.2988505747127" width="118.37837837837837" height="110.3448275862069" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="2. Notion stores each entry in a Notion Page on a Notion Database" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" vertex="1" parent="3">
+                    <mxGeometry x="29.99972972972973" y="519.995632183908" width="335.4054054054054" height="55.17241379310345" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" style="edgeStyle=none;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;startArrow=classic;startFill=1;endArrow=none;endFill=0;" edge="1" parent="3" source="11" target="5">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;startArrow=none;startFill=0;endArrow=classic;endFill=1;" edge="1" parent="3" source="11" target="7">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="Row" style="swimlane;childLayout=stackLayout;resizeParent=1;resizeParentMax=0;startSize=20;horizontal=0;horizontalStack=1;rotation=0;" vertex="1" parent="3">
+                    <mxGeometry x="49.19945945945946" y="363.2183908045978" width="651.3513513513514" height="73.5632183908046" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="Resource" style="swimlane;startSize=20;" vertex="1" parent="11">
+                    <mxGeometry x="20" width="138.10810810810813" height="73.5632183908046" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="Tag" style="swimlane;startSize=20;" vertex="1" parent="11">
+                    <mxGeometry x="158.10810810810813" width="98.64864864864866" height="73.5632183908046" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="Publish Date" style="swimlane;startSize=20;" vertex="1" parent="11">
+                    <mxGeometry x="256.7567567567568" width="157.83783783783784" height="73.5632183908046" as="geometry">
+                        <mxRectangle x="260" width="40" height="100" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="15" value="URL" style="swimlane;startSize=20;" vertex="1" parent="11">
+                    <mxGeometry x="414.5945945945946" width="98.64864864864866" height="73.5632183908046" as="geometry">
+                        <mxRectangle x="260" width="40" height="100" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="16" value="Published?" style="swimlane;startSize=20;" vertex="1" parent="11">
+                    <mxGeometry x="513.2432432432432" width="138.10810810810813" height="73.5632183908046" as="geometry">
+                        <mxRectangle x="260" width="40" height="100" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="17" value="&lt;font style=&quot;font-size: 36px;&quot;&gt;Recommendation Data Entry&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;container=0;fontSize=24;" vertex="1" parent="3">
+                    <mxGeometry x="166.65631160572337" y="20" width="416.4133545310016" height="55.17241379310345" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="" style="group;fontSize=16;" vertex="1" connectable="0" parent="1">
+                    <mxGeometry x="1050" y="290" width="720" height="800" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=default;fillColor=none;dashed=1;" vertex="1" parent="18">
+                    <mxGeometry width="720" height="800" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" value="Daily Job Run" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=36;" vertex="1" parent="18">
+                    <mxGeometry x="233.24" y="20" width="253.53" height="54.55" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;Scheduled/Event triggered container run&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;" vertex="1" parent="18">
+                    <mxGeometry x="190.58823529411765" y="90.90909090909092" width="338.8235294117647" height="54.54545454545455" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;Notion DB Container&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=default;fillColor=default;" vertex="1" parent="18">
+                    <mxGeometry x="42.35294117647059" y="231.81818181818184" width="254.11764705882354" height="109.0909090909091" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;startArrow=none;startFill=0;endArrow=classic;endFill=1;" edge="1" parent="18" source="21" target="22">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;WhatsApp Container&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=default;fillColor=default;" vertex="1" parent="18">
+                    <mxGeometry x="423.5294117647059" y="231.81818181818184" width="254.11764705882354" height="109.0909090909091" as="geometry"/>
+                </mxCell>
+                <mxCell id="25" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;startArrow=none;startFill=0;endArrow=classic;endFill=1;" edge="1" parent="18" source="21" target="24">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="26" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;startArrow=classic;startFill=1;endArrow=classic;endFill=1;" edge="1" parent="18" source="22" target="24">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="27" value="3. Sends the Resource data" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" vertex="1" parent="18">
+                    <mxGeometry x="296.47058823529414" y="340.9090909090909" width="127.05882352941177" height="54.54545454545455" as="geometry"/>
+                </mxCell>
+                <mxCell id="28" value="2. Fetches one oldest Resource from Notion" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=16;" vertex="1" parent="18">
+                    <mxGeometry x="21.176470588235293" y="418.1818181818182" width="105.88235294117648" height="200" as="geometry"/>
+                </mxCell>
+                <mxCell id="29" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;WhatsApp&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=default;fillColor=default;" vertex="1" parent="18">
+                    <mxGeometry x="423.5294117647059" y="618.1845454545453" width="254.11764705882354" height="72.72727272727272" as="geometry"/>
+                </mxCell>
+                <mxCell id="30" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;strokeWidth=1;startArrow=none;startFill=0;endArrow=classic;endFill=1;" edge="1" parent="18" source="24" target="29">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="31" value="4. Publishes to Group Chat" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" vertex="1" parent="18">
+                    <mxGeometry x="571.7647058823529" y="395.4545454545455" width="127.05882352941177" height="109.0909090909091" as="geometry"/>
+                </mxCell>
+                <mxCell id="32" value="5. Updates the Resource status to Published" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=16;" vertex="1" parent="18">
+                    <mxGeometry x="190.58823529411765" y="418.1818181818182" width="105.88235294117648" height="200" as="geometry"/>
+                </mxCell>
+                <mxCell id="37" value="1. Initialize the containers" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" vertex="1" parent="18">
+                    <mxGeometry x="50" y="145.46" width="180" height="54.55" as="geometry"/>
+                </mxCell>
+                <mxCell id="35" value="User Interaction &amp;amp; Data Flow" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=24;" vertex="1" parent="1">
+                    <mxGeometry x="80" y="202" width="330" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="36" value="MSII SDG&lt;br style=&quot;font-size: 48px;&quot;&gt;Content Recommendation System" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=48;" vertex="1" parent="1">
+                    <mxGeometry x="80" y="80" width="960" height="122" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

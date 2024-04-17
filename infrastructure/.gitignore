@@ -1,0 +1,47 @@
+# Log files
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+
+# Editor and IDE specific files
+*.idea/
+*.vscode/
+*.project
+*.classpath
+*.settings/
+
+# Compiled Bytecode
+*.class
+
+# Other files that should not be committed
+.DS_Store
+Thumbs.db
+
+# Build and release directories
+build/
+release/
+dist/
+target/
+
+# Environment-specific configurations or secret files (be careful with these!)
+.env
+secrets.yml
+credentials.json
+
+# Dependency directories (depends on your tools and languages)
+node_modules/
+venv/
+
+# Others (based on the tools or scripts you use)
+*.backup
+*.bak
+*.swp
+*.swo
+
+# Ignore Terraform files
+*.tfstate
+*.tfstate.*
+.terraform*
+*.tfvars

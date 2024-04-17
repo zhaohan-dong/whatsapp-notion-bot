@@ -1,0 +1,126 @@
+${jsonencode([
+    {
+      "name": "whatsapp-bot",
+      "image": "${whatsapp_bot_image_repository}:latest",
+      "mountPoints": [
+        {
+          "sourceVolume": "whatsapp-bot-auth",
+          "containerPath": "/app/.whatsapp_auth",
+          "readOnly": false
+        }
+      ],
+      "healthCheck": {
+              "command": ["CMD-SHELL", "wget --spider -q http://$(hostname -i):8080/health || exit 1"]
+              "interval": 30,
+              "timeout": 5,
+              "retries": 3,
+              "startPeriod": 10
+            },
+      "memory": 512,
+      "cpu": 256,
+      "environment": [
+        {
+          "name": "PORT",
+          "value": "8080"
+        },
+        {
+          "name": "WHATSAPP_CLIENT_ID",
+          "value": "messenger1"
+        },
+        {
+          "name": "WHATSAPP_AUTH_DATA_PATH",
+          "value": "/app/.whatsapp_auth"
+        },
+        {
+          "name": "JWT_SECRET_KEY",
+          "value": "${jwt_secret_key}"
+        },
+        {
+          "name": "JWT_USERNAME",
+          "value": "username"
+        },
+        {
+          "name": "JWT_PASSWORD",
+          "value": "password"
+        }
+      ],
+      "portMappings": [
+        {
+          "hostPort": 8080,
+          "containerPort": 8080
+        }
+      ],
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group" : "${whatsapp_log_group_name}",
+          "awslogs-region": "us-east-1",
+          "awslogs-stream-prefix": "ecs"
+        }
+      }
+    },
+    {
+      "name": "notion-integration",
+      "image": "${notion_integration_image_repository}:latest",
+      "memory": 256,
+      "cpu": 128,
+      "links": ["whatsapp-bot:whatsapp-bot"], // Link to the whatsapp-bot container
+      "environment": [
+        {
+          "name": "NOTION_API_KEY",
+          "value": "${notion_api_key}"
+        },
+        {
+          "name": "NOTION_DATABASE_ID",
+          "value": "${notion_database_id}"
+        },
+        {
+          "name": "WHATSAPP_NUMBER",
+          "value": "${whatsapp_number}"
+        },
+        {
+          "name": "WHATSAPP_SERVICE_IP",
+          "value": "whatsapp-bot" // Use the linked service name of the whatsapp-bot container
+        },
+        {
+          "name": "WHATSAPP_SERVICE_PORT",
+          "value": "8080"
+        },
+        {
+          "name": "WHATSAPP_JWT_USERNAME",
+          "value": "username"
+        },
+        {
+          "name": "WHATSAPP_JWT_PASSWORD",
+          "value": "password"
+        }
+      ],
+      "logConfiguration": {
+              "logDriver": "awslogs",
+              "options": {
+                "awslogs-group" : "${notion_log_group_name}",
+                "awslogs-region": "us-east-1",
+                "awslogs-stream-prefix": "ecs"
+              }
+      },
+      "dependsOn": [
+              {
+                "containerName": "whatsapp-bot",
+                "condition": "HEALTHY"
+              }],
+      "portMappings": [
+              {
+                "hostPort": 3000, // Healthcheck port
+                "containerPort": 3000
+              }
+            ],
+    "healthCheck": {
+                  "command": ["CMD-SHELL", "wget --spider -q http://$(hostname -i):3000/health || exit 1"], // Replace with the appropriate port if different
+                  "interval": 30,
+                  "timeout": 5,
+                  "retries": 3,
+                  "startPeriod": 10
+                }
+    }
+  ])}
+  

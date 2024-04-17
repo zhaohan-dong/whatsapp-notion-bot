@@ -1,0 +1,33 @@
+version: '3'
+services:
+  whatsapp-bot:
+    image: # ECR tag
+    ports:
+      - "8080:8080"
+    environment:
+      - PORT=8080
+      - WHATSAPP_CLIENT_ID=messenger1
+      - WHATSAPP_AUTH_DATA_PATH=/app/.whatsapp_auth
+      - JWT_SECRET_KEY=secret
+      - JWT_USERNAME=username
+      - JWT_PASSWORD=password
+    volumes:
+      - whatsapp-bot-auth:/app/.whatsapp_auth
+
+  notion-integration:
+    image: # ECR tag
+    depends_on:
+      - whatsapp-bot
+    environment:
+      - NOTION_API_KEY=
+      - NOTION_DATABASE_ID=
+      - WHATSAPP_NUMBER=
+      - WHATSAPP_SERVICE_IP=
+      - WHATSAPP_SERVICE_PORT=
+      - WHATSAPP_JWT_USERNAME=
+      - WHATSAPP_JWT_PASSWORD=
+      # - RESOURCE_TAGS=Growth
+    command: ["sh", "-c", "sleep 10 && node index.js"]
+
+volumes:
+  whatsapp-bot-auth:
